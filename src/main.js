@@ -1,4 +1,4 @@
-import PriorityQueu from "./PriorityQueu";
+import PriorityQueu from "./Queu";
 
 let queu;
 let isFinished = true
