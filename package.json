@@ -1,0 +1,11 @@
+{
+  "name": "discrete-modelling-assign",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "jest main.spec.js",
+    "start": "node main.js"
+  },
+  "dependencies": {
+    "jest": "^27.5.1"
+  }
+}
