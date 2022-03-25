@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "scripts": {
     "test": "jest main.spec.js",
-    "start": "node src/main.js"
+    "start": "NODE_OPTIONS='--experimental-specifier-resolution=node' node src/main.js"
   },
   "dependencies": {
     "jest": "^27.5.1"
-  }
+  },
+  "type": "module"
 }

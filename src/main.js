@@ -1,6 +1,11 @@
-import PriorityQueu from "./Queu";
+// const system variables
+import PriorityQueue from "./Queu";
 
-let queu;
+const INTERVAL = 5
+const FAULTY_PARTS = 100
+const SERVICE_TIME = (6+4)/2
+
+let queu = PriorityQueue();
 let isFinished = true
 
 // (önceliği yüksek) sıradaki eventi verir
