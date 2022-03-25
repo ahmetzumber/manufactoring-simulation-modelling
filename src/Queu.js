@@ -4,8 +4,7 @@ class Node {
         this.priority = priority;
     }
 }
-
-export default class PriorityQueue {
+class PriorityQueue {
     constructor() {
         this.items = [];
     }
@@ -31,5 +30,4 @@ export default class PriorityQueue {
     }
 
 }
-
-
+export default new PriorityQueue()

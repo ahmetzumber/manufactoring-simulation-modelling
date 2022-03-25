@@ -1,16 +1,21 @@
-// const system variables
 import PriorityQueue from "./Queu";
 
+// const system variables
 const INTERVAL = 5
 const FAULTY_PARTS = 100
-const SERVICE_TIME = (6+4)/2
+const SERVICE_TIME = Math.floor(Math.random() * 8) + 2; // 6 +- 4 service time
 
-let queu = PriorityQueue();
+// js enum usage
+const eventTypes = { BUSY: 1, IDLE: 0 }
+Object.freeze(eventTypes)
+
+let FEL = PriorityQueue
 let isFinished = true
 
-// (önceliği yüksek) sıradaki eventi verir
+
+// it gives next event type which has high priority
 function timeAdvance(){
-    return queu.dequeue()
+    return FEL.dequeue()
 }
 
 function eventHandling(event){}
@@ -22,14 +27,17 @@ function initialization(timeInterval, endingCriteria, startTime, finishTime){
     let criteria = endingCriteria
     let sTime = startTime
     let fTime = finishTime
-    queu = new PriorityQueu()
 }
 
 function startSimulation(){
+    console.log('Simulation starts..')
+    console.log()
     initialization(5, 100, 0, 60)
+    console.log("CLOCK\t\tListinQueu\t\tStatus\t\t")
     while(!isFinished){
-        let eventType = timeAdvance()
-        eventHandling(eventType)
+
+        let nextEventType = timeAdvance()
+        eventHandling(nextEventType)
     }
     generateReport()
 }
